@@ -1,0 +1,9 @@
+<h1>生徒一覧</h1>
+
+
+<% @students.each do |student| %>
+     <p><%= student.students_id %></p>
+     <p><%= student.message %></p>
+<% end %>
+
+<%= link_to '新規追加', '/students/new' %>

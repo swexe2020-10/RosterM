@@ -1,0 +1,14 @@
+
+
+<%= form_for @student , url: {action: :create} do |f| %>
+	<p><%= f.label :students_id, '学籍番号' %>
+	<%= f.number_field :students_id %></p>
+	<p><%= f.label :name, '名前' %>
+	<%= f.text_field :name %></p>
+
+
+
+
+
+<%= f.submit '登録' %>
+<% end %>
