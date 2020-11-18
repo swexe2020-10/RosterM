@@ -1,0 +1,7 @@
+<%= form_for @teacher, url: {action: :create} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :pass %>
+  <%= f.text_field :pass %>
+  <%= f.submit '登録' %>
+<% end %>

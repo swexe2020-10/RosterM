@@ -1,0 +1,12 @@
+<% @teachers.each do |e| %>
+    <p>
+        <%=e.name%>
+        <%= e.pass %>
+    </p>
+<% end %>
+
+
+<hr>
+<p>
+<%= link_to '新規登録' , teachers_new_path %>
+</p>

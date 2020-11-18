@@ -1,7 +1,5 @@
 class TopController < ApplicationController
-  def index
-  end
-
-  def new
+  def main
+    
   end
 end
