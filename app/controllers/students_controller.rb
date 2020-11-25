@@ -8,11 +8,17 @@ class StudentsController < ApplicationController
   end
 
   def create
-    students_id = params[:student][:students_id]
-    name = params[:student][:name]
-    student = Student.new(name: name)
-    student.save
-    redirect_to'/'
+    @student = Student.new(
+    students_id: params[:student][:students_id],
+    name: params[:student][:name]
+   )
+    if @student.save
+      flash[:info] = "生徒を登録しました"
+      redirect_to students_path
+    else
+      @student.name = ""
+      render :new
+    end
   end
 
   def edit
@@ -22,8 +28,8 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    @student = Student.find(params[:id])
-	　student.destroy
-	　redirect_to '/'
+    student = Student.find(params[:id])
+    student.destroy
+    redirect_to students_path
   end
 end

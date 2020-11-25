@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'classes#main'
+  
   get 'top/login_form'
   post 'top/login'
   get 'top/logout'

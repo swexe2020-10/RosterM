@@ -1,9 +1,13 @@
 <h1>生徒一覧</h1>
 
 
-<% @students.each do |student| %>
-     <p><%= student.students_id %></p>
-     <p><%= student.message %></p>
+<% @students.each do |e| %>
+<p>
+     【学籍番号】<%= e.students_id %>
+     【氏名】<%= e.name %>
+     <%= link_to '削除', student_path(e), method: :delete %>
+</p>
+
 <% end %>
 
 <%= link_to '新規追加', '/students/new' %>
