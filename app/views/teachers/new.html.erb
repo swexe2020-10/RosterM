@@ -1,7 +1,30 @@
+<h1>ユーザー登録</h1>
+
+<% if @teacher.errors.present? %>
+<font color="red">
+    <h3>エラーがあります</h3>
+    <ul>
+        <% @teacher.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+    </ul>
+    </font>
+<% end %>
+
 <%= form_for @teacher, url: {action: :create} do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :pass %>
-  <%= f.text_field :pass %>
-  <%= f.submit '登録' %>
+<p>  
+    <%= f.label :uid, 'ユーザーID' %>
+    <%= f.text_field :uid %></p>
+<p>
+    <%= f.label :password, 'パスワード' %>
+    <%= f.text_field :password %></p>
+
+<p>
+    <%= f.label :password_confirmation, 'パスワード(確認)' %>
+    <%= f.text_field :password_confirmation %>
+</p>
+
+<p>
+    <%= f.submit '登録' %>
+</p>
 <% end %>
