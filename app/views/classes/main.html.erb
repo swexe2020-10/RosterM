@@ -1,0 +1,7 @@
+<h1>ログイン後の画面</h1>
+
+<% if current_teacher %>
+    <%= link_to 'ログアウト', top_logout_path %>
+<% else %>
+    <%= link_to 'ログイン', top_login_form_path %>
+<% end %>
