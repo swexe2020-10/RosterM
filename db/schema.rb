@@ -32,7 +32,8 @@ ActiveRecord::Schema.define(version: 2020_11_25_053411) do
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "uid"
+    t.integer "teacher_id"
+    t.string "name"
     t.string "pass"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
