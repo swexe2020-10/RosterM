@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
    )
     if @student.save
       flash[:info] = "生徒を登録しました"
-      redirect_to students_path
+      redirect_to root_path
     else
       @student.name = ""
       render :new

@@ -15,7 +15,8 @@ class TopController < ApplicationController
   
   def logout
     session.delete(:login_uid)
-    redirect_to root_path
+    redirect_to top_login_form_path
+  
   end
   
   
