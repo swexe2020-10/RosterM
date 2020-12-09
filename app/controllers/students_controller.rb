@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
     name: params[:student][:name],
     name_furi: params[:student][:name_furi],
     grade: params[:student][:grade],
+    course: params[:student][:course],
     message: params[:student][:message]
    )
     if @student.save

@@ -5,6 +5,12 @@
     <p>
         【学籍番号】<%= e.students_id %>
         【氏名】<%= e.name %>
+        【ふりがな】<%= e.name_furi %>
+        【学年】<%= e.grade %>
+        【クラス】<%= e.course %>
+        【担任】
+        <p>【メモ】</p><%= simple_format(h e.message) %>
+     <%= link_to '生徒情報変更', edit_student_path(e) %>
      <%= link_to '削除', student_path(e), method: :delete %>
     </p>
     <% end %>

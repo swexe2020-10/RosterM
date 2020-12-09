@@ -7,9 +7,11 @@
 	<p><%= f.label :name_furi, 'ふりがな' %>
 	<%= f.text_field :name_furi %></p>
 	<p><%= f.label :grade, '学年' %>
-	<%= f.number_field :grade %></p>
+	<%= f.select :grade, ['1', '2', '3', '4'] %></p>
+	<p><%= f.label :course, 'クラス' %>
+	<%= f.number_field :course %></p>
 	<p><%= f.label :message, 'メモ' %>
-	<%= f.text_field :message %></p>
+	<%= f.text_area :message %></p>
 
 <%= f.submit '更新' %>
 <% end %>
