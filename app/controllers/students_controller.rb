@@ -27,6 +27,7 @@ class StudentsController < ApplicationController
 
   def edit
     @student = Student.find(params[:id])
+    @teachers = Teacher.all
   end
   
   def update
@@ -36,7 +37,7 @@ class StudentsController < ApplicationController
     name_furi: params[:student][:name_furi],
     grade: params[:student][:grade],
     message: params[:student][:message])
-    redirect_to students_path
+    redirect_to root_path
   end
 
   def show

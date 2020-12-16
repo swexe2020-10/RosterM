@@ -1,5 +1,5 @@
 
-<%= form_for @student , url: {action: :update} do |f| %>
+<%= form_for @student, url: {action: :update} do |f| %>
 	<p><%= f.label :students_id, '学籍番号' %>
 	<%= f.number_field :students_id %></p>
 	<p><%= f.label :name, '名前' %>
@@ -10,6 +10,15 @@
 	<%= f.select :grade, ['1', '2', '3', '4'] %></p>
 	<p><%= f.label :course, 'クラス' %>
 	<%= f.number_field :course %></p>
+	
+	
+
+  	<p>
+  		<%= f.label :tannin,'担任' %>
+   		<%= f.select :tannin, @teachers.map{ |teacher| [teacher.uid] } %>
+  	</p>
+	
+	
 	<p><%= f.label :message, 'メモ' %>
 	<%= f.text_area :message %></p>
 

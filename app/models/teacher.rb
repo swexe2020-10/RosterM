@@ -1,5 +1,5 @@
 class Teacher < ApplicationRecord
-    
+   
     validates :uid, presence: true, uniqueness: :true
    
     validates :password, presence: true ,confirmation: true 
