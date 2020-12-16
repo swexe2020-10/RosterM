@@ -1,19 +1,40 @@
 <h1>生徒管理画面</h1>
 
+<table border="1" >
+  <thead>
+    <tr>
+      <th>学籍番号</th>
+      <th>氏名</th>
+      <th>ふりがな</th>
+      <th>学年</th>
+      <th>クラス</th>
+      <th>メモ</th>
+      <th colspan="3">編集</th>
+    </tr>
+  </thead>
 
-    <% @students.each do |e| %>
-    <p>
-        【学籍番号】<%= e.students_id %>
-        【氏名】<%= e.name %>
-        【ふりがな】<%= e.name_furi %>
-        【学年】<%= e.grade %>
-        【クラス】<%= e.course %>
-        【担任】
-        <p>【メモ】</p><%= simple_format(h e.message) %>
-     <%= link_to '生徒情報変更', edit_student_path(e) %>
-     <%= link_to '削除', student_path(e), method: :delete %>
-    </p>
-    <% end %>
+
+ <tbody>
+
+     <% @students.each do |e| %>
+     <tr>
+     <p>
+          <td><%= e.students_id %></td>
+          <td><%= e.name %></td>
+          <td><%= e.name_furi %></td>
+          <td><%= e.grade %></td>
+          <td><%= e.course %></td>
+          <td><%= simple_format(h e.message) %></td>
+          
+          
+          <td colspan="3"><%= link_to '生徒情報変更', edit_student_path(e) %>
+          <%= link_to '削除', student_path(e), method: :delete %></td>
+     </p>
+      </tr>
+     <% end %>
+ </tbody>
+</table>
+
 
 
 <%= link_to '追加', '/students/new' %>
