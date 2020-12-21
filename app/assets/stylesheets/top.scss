@@ -2,11 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-    background-color: #d0e39b;
+    background-color: #97cdf3;
 }
 
 .form {
-    border: 1px solid #555;
-    padding-top:225px;
-    text-align:center
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;
+    background: #FFF;
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+    text-align:center;
+}
+.form p {
+    margin: 0; 
+    padding: 0;
 }

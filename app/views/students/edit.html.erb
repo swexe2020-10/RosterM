@@ -15,8 +15,7 @@
 	
 
   	<p>
-  		<%= f.label :tannin,'担任' %>
-   		<%= f.select :tannin, @teachers.map{ |teacher| [teacher.uid] } %>
+   		担任：<%= @teachers.map{ |teacher| [teacher.uid] } %>
   	</p>
 	
 	

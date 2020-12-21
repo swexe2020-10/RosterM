@@ -1,21 +1,6 @@
 <h1>生徒管理画面</h1>
 
-<<<<<<< HEAD
-    <% @students.each do |e| %>
-    <p>
-        【学籍番号】<%= e.students_id %>
-        【氏名】<%= e.name %>
-        【ふりがな】<%= e.name_furi %>
-        【学年】<%= e.grade %>
-        【クラス】<%= e.course %>
-        【担任】
-        <p>【メモ】</p><%= simple_format(h e.message) %>
-     <%= link_to '生徒情報変更', edit_student_path(e) %>
-     <%= link_to '削除', student_path(e), method: :delete %>
-    </p>
-    <hr>
-    <% end %>
-=======
+
 <table border="1" >
   <thead>
     <tr>
@@ -50,9 +35,6 @@
      <% end %>
  </tbody>
 </table>
-
->>>>>>> 7580405d3361336bc941bc6756b87671b37a55b5
-
 
 <%= link_to '追加', '/students/new' %>
 <hr>
