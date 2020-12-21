@@ -8,6 +8,20 @@
 <hr>
 
 
+<% if current_teacher %>
+    
+    <%=link_to(top_logout_path ) do %>
+        <button class="btn-secondary1" >ログアウト</button>
+    <%end%>
+<% else %>
+    
+    <%=link_to(top_login_form_path) do %>
+        <button class="btn-secondary1" >ログイン</button>
+    <%end%>
+<% end %>
+
+<hr>
+
 <table border="1" >
   <thead>
     <tr>
@@ -45,4 +59,13 @@
  </tbody>
 </table>
 
+<<<<<<< HEAD
 <%= link_to '追加', '/students/new' %>
+=======
+<hr>
+<%=link_to("/students/new") do %>
+    <button class="btn btn-secondary btn-lg" >追加</button>
+<%end%>
+
+
+>>>>>>> 721329f5d4a09ebaf3345675cbeb436218e7f666
