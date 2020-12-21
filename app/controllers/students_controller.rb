@@ -2,11 +2,14 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
   end
+  
 
   def new
     @student = Student.new
     @teachers = Teacher.all
   end
+  
+  
 
   def create
     @student = Student.new(
