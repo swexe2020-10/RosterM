@@ -7,6 +7,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :name_furi
       t.integer :grade
       t.integer :class
+      t.string :tannin
       t.string :message
 
       t.timestamps

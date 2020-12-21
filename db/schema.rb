@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_044305) do
     t.string "name_furi"
     t.integer "grade"
     t.integer "course"
+    t.string "tannin"
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

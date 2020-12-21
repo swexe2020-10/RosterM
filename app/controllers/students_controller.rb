@@ -5,6 +5,7 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    @teachers = Teacher.all
   end
 
   def create
@@ -14,6 +15,7 @@ class StudentsController < ApplicationController
     name_furi: params[:student][:name_furi],
     grade: params[:student][:grade],
     course: params[:student][:course],
+    tannin: params[:student][:tannin],
     message: params[:student][:message]
    )
     if @student.save
@@ -36,6 +38,7 @@ class StudentsController < ApplicationController
     name: params[:student][:name],
     name_furi: params[:student][:name_furi],
     grade: params[:student][:grade],
+    tannin: params[:student][:tannin],
     message: params[:student][:message])
     redirect_to root_path
   end
