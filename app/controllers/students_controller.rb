@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
    )
     if @student.save
       flash[:info] = "生徒を登録しました"
-      redirect_to root_path
+      redirect_to classes_main_path
     else
       @student.name = ""
       render :new
@@ -43,7 +43,7 @@ class StudentsController < ApplicationController
     grade: params[:student][:grade],
     tannin: params[:student][:tannin],
     message: params[:student][:message])
-    redirect_to root_path
+    redirect_to classes_main_path
   end
 
   def show
@@ -52,6 +52,6 @@ class StudentsController < ApplicationController
   def destroy
     student = Student.find(params[:id])
     student.destroy
-    redirect_to root_path
+    redirect_to classes_main_path
   end
 end
