@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'classes#main'
+  root 'top#login_form'
   
   get 'top/login_form'
   post 'top/login'

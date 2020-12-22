@@ -16,7 +16,7 @@ class TeachersController < ApplicationController
                            
     if @teacher.save
       flash[:info] = "ユーザを登録しました"
-      redirect_to teachers_path
+      redirect_to top_login_form_path
     else
       @teacher.pass = ""
       render :new
